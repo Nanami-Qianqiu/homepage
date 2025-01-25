@@ -42,7 +42,25 @@
 }
 
 .title {
-    text-align: center;
-    font-size: 24px;
-    color: white;
+    text-align: center; /* 文本居中 */
+    margin-bottom: 10px; /* 调整标题与副标题之间的间距 */
+    line-height: 1.2; /* 调整标题行间距 */
+    font-size: 40px; /* 你可以根据需要调整字体大小 */
+    color: white; /* 设置标题颜色为白色 */
+    font-family: OMORI_GAME, sans-serif; /* 设置字体 */
+}
+
+.subtitle {
+    text-align: center; /* 文本居中 */
+    margin-top: 0; /* 确保没有额外的上边距 */
+    line-height: 0.8; /* 调整副标题行间距 */
+    font-size: 24px; /* 你可以根据需要调整字体大小 */
+    color: white; /* 设置副标题颜色为白色 */
+    font-family: OMORI_GAME, sans-serif; /* 设置字体 */
+}
+
+.social-buttons-container {
+    display: flex; /* 设置为flex */
+    justify-content: center; /* 水平居中 */
+    margin-top: 25px; /* 调整按钮与副标题之间的间距 */
 }

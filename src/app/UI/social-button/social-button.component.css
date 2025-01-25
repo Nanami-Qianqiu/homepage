@@ -1,0 +1,18 @@
+.social-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px; /* 按钮宽度 */
+    height: 42px; /* 按钮高度 */
+    margin: 0 15px; /* 按钮间距 */
+    border-radius: 50%; /* 圆形按钮 */
+    background-color: white; /* 背景颜色 */
+    transition: background-color 0.3s; /* 背景颜色过渡效果 */
+    text-decoration: none; /* 去掉下划线 */
+    /*color: #333; !* 图标颜色 *!*/
+}
+
+.social-button:hover {
+    background-color: #d1e7e7; /* 悬停时背景颜色 */
+    animation: move 0.6s; /* 应用动画 */
+}

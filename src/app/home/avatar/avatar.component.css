@@ -4,7 +4,7 @@
 }
 
 .avatar-container {
-    margin-bottom: 30px; /* 头像与其他内容之间的间距 */
+    margin-bottom: 18px; /* 头像与其他内容之间的间距 */
 }
 
 .avatar {
@@ -23,33 +23,5 @@
 
 .avatar:hover {
     top: -10px;
-}
-
-@keyframes glowing {
-    0% {
-        box-shadow: 0 0 4px #50afda;
-        -moz-box-shadow: 0 0 4px #50afda;
-        -webkit-box-shadow: 0 0 4px #50afda;
-    }
-    25% {
-        box-shadow: 0 0 50px #50afda;
-        -moz-box-shadow: 0 0 50px #50afda;
-        -webkit-box-shadow: 0 0 50px #50afda;
-    }
-    50% {
-        box-shadow: 0 0 4px #50afda;
-        -moz-box-shadow: 0 0 4px #50afda;
-        -webkit-box-shadow: 0 0 4px #50afda;
-    }
-    75% {
-        box-shadow: 0 0 50px #50afda;
-        -moz-box-shadow: 0 0 50px #50afda;
-        -webkit-box-shadow: 0 0 50px #50afda;
-    }
-    100% {
-        box-shadow: 0 0 4px #50afda;
-        -moz-box-shadow: 0 0 4px #50afda;
-        -webkit-box-shadow: 0 0 4px #50afda;
-    }
 }
 
