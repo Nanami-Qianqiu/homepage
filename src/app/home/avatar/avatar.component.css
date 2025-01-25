@@ -1,0 +1,55 @@
+.profile-section {
+    text-align: center; /* 文本居中 */
+    margin-top: 100px; /* 顶部间距 */
+}
+
+.avatar-container {
+    margin-bottom: 30px; /* 头像与其他内容之间的间距 */
+}
+
+.avatar {
+    position: relative; /* 相对定位 */
+    width: 150px; /* 头像宽度 */
+    height: 150px; /* 头像高度 */
+    top: 0; /* 顶部位置 */
+    display: inline-block; /* 行内块元素 */
+    border-radius: 50%;
+    object-fit: cover; /* 图片填充 */
+    /*border: 3px solid white; !* 可选：添加边框 *!*/
+    animation: glowing 4s ease-in-out infinite; /* 动画 */
+    cursor: pointer; /* 鼠标指针 */
+    transition: top 0.5s ease, transform 0.3s ease; /* 添加过渡效果 */
+}
+
+.avatar:hover {
+    top: -10px;
+}
+
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 4px #50afda;
+        -moz-box-shadow: 0 0 4px #50afda;
+        -webkit-box-shadow: 0 0 4px #50afda;
+    }
+    25% {
+        box-shadow: 0 0 50px #50afda;
+        -moz-box-shadow: 0 0 50px #50afda;
+        -webkit-box-shadow: 0 0 50px #50afda;
+    }
+    50% {
+        box-shadow: 0 0 4px #50afda;
+        -moz-box-shadow: 0 0 4px #50afda;
+        -webkit-box-shadow: 0 0 4px #50afda;
+    }
+    75% {
+        box-shadow: 0 0 50px #50afda;
+        -moz-box-shadow: 0 0 50px #50afda;
+        -webkit-box-shadow: 0 0 50px #50afda;
+    }
+    100% {
+        box-shadow: 0 0 4px #50afda;
+        -moz-box-shadow: 0 0 4px #50afda;
+        -webkit-box-shadow: 0 0 4px #50afda;
+    }
+}
+

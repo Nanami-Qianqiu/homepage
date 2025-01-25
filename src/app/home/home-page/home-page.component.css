@@ -1,0 +1,48 @@
+:host {
+    position: relative; /* 设置为相对定位，以便绝对定位伪元素 */
+    display: flex; /* 设置组件为flex */
+    flex-direction: column;
+    height: 100vh; /* 设置组件高度为视口高度 */
+    width: 100%; /* 设置组件宽度为100% */
+    overflow: hidden; /* 隐藏溢出部分 */
+}
+
+:host::before {
+    content: ''; /* 伪元素需要有内容 */
+    position: absolute; /* 绝对定位 */
+    top: 0; /* 顶部对齐 */
+    left: 0; /* 左侧对齐 */
+    right: 0; /* 右侧对齐 */
+    bottom: 0; /* 底部对齐 */
+    background-image: url('/assets/home-bg.jpg'); /* 替换为你的背景图路径 */
+    background-size: cover; /* 使背景图覆盖整个容器 */
+    background-position: center; /* 背景图居中 */
+    filter: blur(6px); /* 添加模糊效果 */
+    z-index: 0; /* 使伪元素在底层 */
+}
+
+:host::after {
+    content: ''; /* 伪元素需要有内容 */
+    position: absolute; /* 绝对定位 */
+    top: 0; /* 顶部对齐 */
+    left: 0; /* 左侧对齐 */
+    right: 0; /* 右侧对齐 */
+    bottom: 0; /* 底部对齐 */
+    background: rgba(0, 0, 0, 0.5); /* 添加半透明黑色遮罩，0.5可以调整透明度 */
+    z-index: 1; /* 使遮罩在伪元素之上 */
+}
+
+.content {
+    position: relative; /* 设置为相对定位，以便在上层显示内容 */
+    z-index: 2; /* 使内容在遮罩之上 */
+}
+
+.avatar {
+    position: relative; /* 设置为相对定位，以便绝对定位伪元素 */
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}

@@ -5,6 +5,6 @@ export const routes: Routes = [
     {
         path: '',
         component: HomePageComponent,
-        title: 'Home page',
+        title: 'Basilの空间',
     }
 ];
