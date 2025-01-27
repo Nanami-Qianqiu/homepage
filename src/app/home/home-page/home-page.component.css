@@ -14,10 +14,10 @@
     left: 0; /* 左侧对齐 */
     right: 0; /* 右侧对齐 */
     bottom: 0; /* 底部对齐 */
-    background-image: url('/assets/home-bg.jpg'); /* 替换为你的背景图路径 */
-    background-size: cover; /* 使背景图覆盖整个容器 */
+    background-image: url('/assets/omori-the-otherworld.jpg'); /* 替换为你的背景图路径 */
     background-position: center; /* 背景图居中 */
-    filter: blur(6px); /* 添加模糊效果 */
+    background-repeat: repeat-y;
+    animation: scroll-background 180s linear infinite; /* 添加动画 */
     z-index: 0; /* 使伪元素在底层 */
 }
 
@@ -28,9 +28,19 @@
     left: 0; /* 左侧对齐 */
     right: 0; /* 右侧对齐 */
     bottom: 0; /* 底部对齐 */
-    background: rgba(0, 0, 0, 0.5); /* 添加半透明黑色遮罩，0.5可以调整透明度 */
+    background: rgba(0, 0, 0, 0.0); /* 添加半透明黑色遮罩，0.3可以调整透明度 */
     z-index: 1; /* 使遮罩在伪元素之上 */
 }
+
+@keyframes scroll-background {
+    0% {
+        background-position: center 900%; /* 开始位置 */
+    }
+    100% {
+        background-position: center -50%; /* 结束位置 */
+    }
+}
+
 
 .content {
     position: relative; /* 设置为相对定位，以便在上层显示内容 */
