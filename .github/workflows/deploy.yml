@@ -9,7 +9,7 @@ env:
     IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-    build-and-push:
+    build-image:
         runs-on: ubuntu-latest
         permissions:
             contents: read
@@ -44,4 +44,3 @@ jobs:
                     file: ./iac/Dockerfile
                     push: true
                     tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-
