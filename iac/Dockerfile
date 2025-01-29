@@ -11,5 +11,5 @@ FROM nginx:1.25-alpine
 LABEL author="pevan"
 
 RUN rm -rf /usr/share/nginx/html/*
-COPY --from=build /app/dist/homepage /usr/share/nginx/html
+COPY --from=build /app/dist/homepage/browser /usr/share/nginx/html
 COPY /iac/nginx.conf /etc/nginx/conf.d/default.conf
