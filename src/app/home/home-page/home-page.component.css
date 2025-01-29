@@ -21,16 +21,16 @@
     z-index: 0; /* 使伪元素在底层 */
 }
 
-:host::after {
-    content: ''; /* 伪元素需要有内容 */
-    position: absolute; /* 绝对定位 */
-    top: 0; /* 顶部对齐 */
-    left: 0; /* 左侧对齐 */
-    right: 0; /* 右侧对齐 */
-    bottom: 0; /* 底部对齐 */
-    background: rgba(0, 0, 0, 0.0); /* 添加半透明黑色遮罩，0.3可以调整透明度 */
-    z-index: 1; /* 使遮罩在伪元素之上 */
-}
+/*:host::after {*/
+/*    content: ''; !* 伪元素需要有内容 *!*/
+/*    position: absolute; !* 绝对定位 *!*/
+/*    top: 0; !* 顶部对齐 *!*/
+/*    left: 0; !* 左侧对齐 *!*/
+/*    right: 0; !* 右侧对齐 *!*/
+/*    bottom: 0; !* 底部对齐 *!*/
+/*    background: rgba(0, 0, 0, 0.0); !* 添加半透明黑色遮罩，0.3可以调整透明度 *!*/
+/*    z-index: 1; !* 使遮罩在伪元素之上 *!*/
+/*}*/
 
 @keyframes scroll-background {
     0% {
@@ -57,7 +57,7 @@
     line-height: 1.2; /* 调整标题行间距 */
     font-size: 40px; /* 你可以根据需要调整字体大小 */
     color: white; /* 设置标题颜色为白色 */
-    font-family: OMORI_GAME, sans-serif; /* 设置字体 */
+    font-family: OMORI_FONT, sans-serif; /* 设置字体 */
 }
 
 .subtitle {
@@ -66,7 +66,7 @@
     line-height: 0.8; /* 调整副标题行间距 */
     font-size: 24px; /* 你可以根据需要调整字体大小 */
     color: white; /* 设置副标题颜色为白色 */
-    font-family: OMORI_GAME, sans-serif; /* 设置字体 */
+    font-family: OMORI_FONT, sans-serif; /* 设置字体 */
 }
 
 .social-buttons-container {
