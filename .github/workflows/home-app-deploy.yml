@@ -7,9 +7,10 @@ on:
 env:
     REGISTRY: ghcr.io
     IMAGE_NAME: ${{ github.repository }}
+    MODULE_NAME: home-app
 
 jobs:
-    build-and-push:
+    build-image:
         runs-on: ubuntu-latest
         permissions:
             contents: read
@@ -44,4 +45,17 @@ jobs:
                     file: ./iac/Dockerfile
                     push: true
                     tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+
+    deploy:
+        needs: [ build-image ]
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout
+                uses: actions/checkout@v4
+
+            -   name: Deploy to Kubernetes
+                uses: ./.github/workflows/actions/deploy-to-k8s
+                with:
+                    kubesecret: ${{ secrets.KUBESECRET }}
+                    module-name: ${{ env.MODULE_NAME }}
 

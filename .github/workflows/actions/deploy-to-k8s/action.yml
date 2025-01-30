@@ -1,0 +1,23 @@
+name: "Deploy to Kubernetes"
+description: "Deploy to Kubernetes"
+
+inputs:
+    kubesecret:
+        description: "kubesecret"
+        required: true
+    module-name:
+        description: "module-name"
+        required: true
+
+runs:
+    using: "composite"
+    steps:
+        - name: Set the Kubernetes context
+          uses: azure/k8s-set-context@v4
+          with:
+              method: kubeconfig
+              kubeconfig: ${{ inputs.kubesecret }}
+
+        - name: Deploy ${{ inputs.module-name }}
+          shell: bash
+          run: kubectl rollout restart deployment/${{ inputs.module-name }} -n home-app
