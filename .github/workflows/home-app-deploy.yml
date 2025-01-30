@@ -56,6 +56,6 @@ jobs:
             -   name: Deploy to Kubernetes
                 uses: ./.github/workflows/actions/deploy-to-k8s
                 with:
-                    kubesecret: ${{ secrets.KUBESECRET }}
+                    kubesecret: ${{ secrets.KUBE_CONFIG }}
                     module-name: ${{ env.MODULE_NAME }}
 
